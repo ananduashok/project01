@@ -4,6 +4,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "website-bucket" {
     bucket = "aoa-devops-project01-static-website"
+    force_destroy = true
 }
 
 # Disable "Block Public Access" for the S3 bucket
