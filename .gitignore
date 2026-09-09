@@ -1,0 +1,30 @@
+# --- Terraform ---
+# .terraform/ contains the providers and modules downloaded by 'terraform init'
+# You should never commit this folder as it is machine-specific and huge.
+.terraform/
+
+# *.tfstate and *.tfstate.backup hold the mapping of your code to real AWS resources.
+# WARNING: These files often contain sensitive data in plain text. 
+# In a real company, we store these in a "Remote Backend" (like an S3 bucket), not in Git.
+*.tfstate
+*.tfstate.backup
+
+# .terraform.lock.hcl ensures everyone uses the same provider version. 
+# Some teams commit this, some don't. For now, ignore it.
+.terraform.lock.hcl
+
+# --- OS & IDE ---
+# VS Code settings
+.vscode/
+.idea/
+*.swp
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+# Just in case you ever create a local .env file or credentials file
+.env
+*.pem
+credentials.txt
